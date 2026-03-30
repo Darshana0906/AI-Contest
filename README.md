@@ -322,15 +322,10 @@ Single abstraction layer over all LLM providers. If Groq pricing changes or a be
 
 ### Phase 2 — Wider Coverage
 - Add CDSCO dataset (100,000+ drugs)
-- 1mg / PharmEasy API integration for online ordering
-- Nearby Jan Aushadhi store locator by GPS
 - PDF prescription support
 
 ### Phase 3 — Smart Features
 - RAG-based symptom search ("find something for acidity")
-- Drug interaction checker
-- Price history tracking
-- Regional language support (Hindi, Marathi, Tamil)
 - Mobile app (React Native)
 
 ---
@@ -344,3 +339,8 @@ GenericRx is for informational purposes only. Always consult your doctor or phar
 ## License
 
 MIT License — free to use, modify and distribute.
+
+## Author
+
+Team DeepMinds.
+
