@@ -52,7 +52,7 @@ Rules:
 - Identify ALL drugs mentioned in the prescription
 - For each drug, identify the salt composition with exact strength
 - For combination drugs, list ALL salts with their individual strengths
-- Use standard INN (International Nonproprietary Names) for salt names
+- ALWAYS use INN (International Nonproprietary Names) for salt names — never use common/colloquial names
 - If strength is not mentioned, use the most common strength for that drug in India
 - Set confidence < 0.8 if you are unsure about the salt composition
 - Ignore non-drug text (doctor name, patient name, dates, instructions)"""),
@@ -61,7 +61,7 @@ Rules:
 
 {ocr_text}
 
-Return structured data with brand name, salt composition, drug class, dosage form and confidence for each drug.""")
+Return structured data with brand name, salt composition(INN names only - never comman names like vitamin C), drug class, dosage form and confidence for each drug.""")
 ])
 
 

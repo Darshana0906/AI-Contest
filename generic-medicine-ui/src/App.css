@@ -1,421 +1,358 @@
-/* ── Reset & Base ─────────────────────────────────────────────────────────── */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: #f5f7fa;
-  color: #1a1a2e;
-  font-size: 15px;
-  line-height: 1.6;
+/* ── Global ───────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
 }
 
-/* ── App Layout ───────────────────────────────────────────────────────────── */
+body {
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+/* ── Layout ───────────────────────────────────────── */
 .app {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .main {
   flex: 1;
-  max-width: 760px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 30px 16px;
+  max-width: 1100px;
+  margin: auto;
 }
 
-/* ── Header ───────────────────────────────────────────────────────────────── */
+/* ── Header ───────────────────────────────────────── */
 .header {
-  background: #fff;
-  border-bottom: 0.5px solid #e0e4ea;
-  padding: 1rem 0;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: white;
+  padding: 24px 16px;
 }
 
 .header-inner {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 8px;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .logo-icon {
-  width: 32px;
-  height: 32px;
-  background: #1a6b4a;
-  color: #fff;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: 300;
-  flex-shrink: 0;
-}
-
-.logo-text {
-  font-size: 18px;
-  font-weight: 600;
-  color: #1a6b4a;
-  letter-spacing: -0.3px;
+  background: white;
+  color: #4f46e5;
+  border-radius: 50%;
+  padding: 4px 10px;
+  font-weight: bold;
 }
 
 .header-tagline {
-  font-size: 13px;
-  color: #6b7280;
-  border-left: 0.5px solid #e0e4ea;
-  padding-left: 1.5rem;
+  font-size: 14px;
+  opacity: 0.9;
+  margin-top: 6px;
 }
 
-/* ── Upload Section ───────────────────────────────────────────────────────── */
+/* ── Upload Section ───────────────────────────────── */
 .upload-section {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
 }
 
 .dropzone {
-  border: 1.5px dashed #c8d0db;
-  border-radius: 12px;
-  background: #fff;
-  cursor: pointer;
-  transition: border-color 0.2s, background 0.2s;
-  min-height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.dropzone:hover,
-.dropzone--has-file {
-  border-color: #1a6b4a;
-  background: #f0faf5;
-}
-
-.dropzone-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  padding: 2rem;
+  border: 2px dashed #cbd5e1;
+  border-radius: 16px;
+  padding: 40px;
   text-align: center;
+  cursor: pointer;
+  background: white;
+  transition: 0.2s;
 }
 
-.upload-icon {
-  color: #9ca3af;
-  margin-bottom: 4px;
+.dropzone:hover {
+  border-color: #4f46e5;
+  background: #f9fafb;
+}
+
+.dropzone--has-file {
+  padding: 10px;
+}
+
+.preview-img {
+  max-width: 100%;
+  border-radius: 12px;
 }
 
 .dropzone-text {
-  font-size: 15px;
-  color: #374151;
   font-weight: 500;
 }
 
 .dropzone-subtext {
-  font-size: 13px;
-  color: #9ca3af;
+  font-size: 12px;
+  color: #6b7280;
 }
 
-.preview-img {
-  width: 100%;
-  max-height: 360px;
-  object-fit: contain;
-  padding: 1rem;
+.upload-icon {
+  margin-bottom: 10px;
+  color: #4f46e5;
 }
 
+/* ── File Info ───────────────────────────────────── */
 .file-info {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background: #fff;
-  border: 0.5px solid #e0e4ea;
-  border-radius: 8px;
-  padding: 0.6rem 1rem;
-  font-size: 13px;
+  align-items: center;
+  background: #eef2ff;
+  padding: 10px 14px;
+  border-radius: 10px;
 }
 
 .file-name {
-  color: #374151;
-  font-weight: 500;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font-size: 14px;
 }
 
-/* ── Buttons ──────────────────────────────────────────────────────────────── */
+/* ── Buttons ─────────────────────────────────────── */
 .btn-primary {
-  background: #1a6b4a;
-  color: #fff;
+  background: #4f46e5;
+  color: white;
+  padding: 12px;
   border: none;
-  border-radius: 8px;
-  padding: 0.8rem 1.5rem;
-  font-size: 15px;
+  border-radius: 10px;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.2s, transform 0.1s;
-  width: 100%;
+  transition: 0.2s;
 }
 
-.btn-primary:hover:not(:disabled) { background: #155a3e; }
-.btn-primary:active:not(:disabled) { transform: scale(0.99); }
-.btn-primary:disabled { background: #9ca3af; cursor: not-allowed; }
+.btn-primary:hover {
+  background: #4338ca;
+}
+
+.btn-primary:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
 
 .btn-secondary {
-  background: #fff;
-  color: #374151;
-  border: 0.5px solid #d1d5db;
-  border-radius: 6px;
-  padding: 0.4rem 0.9rem;
-  font-size: 13px;
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  padding: 6px 10px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.15s;
-  white-space: nowrap;
 }
 
-.btn-secondary:hover { background: #f9fafb; }
+.btn-secondary:hover {
+  background: #f1f5f9;
+}
 
-/* ── Loading ──────────────────────────────────────────────────────────────── */
+/* ── Error ───────────────────────────────────────── */
+.error-box {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+/* ── Loading ─────────────────────────────────────── */
 .loading-text {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
 }
 
 .spinner {
   width: 16px;
   height: 16px;
-  border: 2px solid rgba(255,255,255,0.3);
-  border-top-color: #fff;
+  border: 2px solid white;
+  border-top: 2px solid transparent;
   border-radius: 50%;
-  animation: spin 0.7s linear infinite;
+  animation: spin 0.8s linear infinite;
 }
 
-@keyframes spin { to { transform: rotate(360deg); } }
-
-/* ── Error ────────────────────────────────────────────────────────────────── */
-.error-box {
-  background: #fef2f2;
-  border: 0.5px solid #fecaca;
-  border-radius: 8px;
-  padding: 0.75rem 1rem;
-  font-size: 14px;
-  color: #991b1b;
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.error-icon {
-  font-weight: 700;
-  flex-shrink: 0;
-}
-
-/* ── Results Section ──────────────────────────────────────────────────────── */
-.results-section {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
+/* ── Summary Bar ─────────────────────────────────── */
 .summary-bar {
-  background: #fff;
-  border: 0.5px solid #e0e4ea;
-  border-radius: 10px;
-  padding: 1rem 1.25rem;
   display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
   align-items: center;
-  gap: 2rem;
 }
 
 .summary-stat {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+  flex: 1;
 }
 
 .summary-label {
   font-size: 12px;
   color: #6b7280;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .summary-value {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
-  color: #1a6b4a;
 }
 
-.summary-bar .btn-secondary {
-  margin-left: auto;
-}
-
-/* ── Drug Card ────────────────────────────────────────────────────────────── */
+/* ── Drug Card ───────────────────────────────────── */
 .drug-card {
-  background: #fff;
-  border: 0.5px solid #e0e4ea;
-  border-radius: 12px;
-  overflow: hidden;
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .drug-header {
-  padding: 1.25rem;
-  cursor: pointer;
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
-  gap: 1rem;
-  transition: background 0.15s;
+  cursor: pointer;
 }
-
-.drug-header:hover { background: #fafafa; }
-
-.drug-info { flex: 1; }
 
 .drug-title-row {
   display: flex;
   align-items: center;
   gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 4px;
 }
 
 .drug-brand {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
-  color: #111827;
 }
 
 .drug-salt {
-  font-size: 13px;
-  color: #1a6b4a;
-  font-weight: 500;
-  margin-bottom: 8px;
+  font-size: 14px;
+  color: #6b7280;
 }
 
 .drug-meta {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
+  margin-top: 6px;
 }
 
 .drug-tag {
   font-size: 12px;
-  background: #f3f4f6;
-  color: #4b5563;
-  border-radius: 4px;
-  padding: 2px 8px;
-}
-
-.expand-icon {
-  font-size: 11px;
-  color: #9ca3af;
-  margin-top: 4px;
-}
-
-/* ── Match Badge ──────────────────────────────────────────────────────────── */
-.match-badge {
-  font-size: 11px;
-  font-weight: 500;
-  padding: 2px 8px;
-  border-radius: 4px;
-}
-
-.match-badge--exact   { background: #d1fae5; color: #065f46; }
-.match-badge--good    { background: #dbeafe; color: #1e40af; }
-.match-badge--partial { background: #fef3c7; color: #92400e; }
-.match-badge--none    { background: #fee2e2; color: #991b1b; }
-
-/* ── Warning ──────────────────────────────────────────────────────────────── */
-.warning-box {
-  margin: 0 1.25rem;
-  background: #fffbeb;
-  border: 0.5px solid #fcd34d;
+  background: #eef2ff;
+  padding: 3px 8px;
   border-radius: 6px;
-  padding: 0.6rem 1rem;
-  font-size: 13px;
+  margin-right: 6px;
+}
+
+/* ── Match Badge ─────────────────────────────────── */
+.match-badge {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.match-badge--exact {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.match-badge--good {
+  background: #fef9c3;
   color: #92400e;
 }
 
-/* ── Generics Table ───────────────────────────────────────────────────────── */
-.generics-section {
-  padding: 0 1.25rem 1.25rem;
-  border-top: 0.5px solid #f3f4f6;
-  margin-top: 0.5rem;
-  padding-top: 1rem;
+.match-badge--partial {
+  background: #fee2e2;
+  color: #991b1b;
 }
 
+/* ── Warning ─────────────────────────────────────── */
+.warning-box {
+  background: #fff7ed;
+  color: #9a3412;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* ── Tier Blocks ─────────────────────────────────── */
+.tier-block {
+  margin-top: 16px;
+}
+
+.tier-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* ── Tables ─────────────────────────────────────── */
 .generics-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 13px;
-  table-layout: fixed;
+  font-size: 14px;
 }
 
 .generics-table th {
   text-align: left;
-  font-weight: 500;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: #6b7280;
-  padding: 0 8px 8px 0;
-  border-bottom: 0.5px solid #e5e7eb;
+  background: #f1f5f9;
+  padding: 8px;
 }
 
 .generics-table td {
-  padding: 10px 8px 10px 0;
-  border-bottom: 0.5px solid #f3f4f6;
-  color: #374151;
-  vertical-align: top;
+  padding: 8px;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-.generics-table tr:last-child td { border-bottom: none; }
-
-.row-best td { background: #f0faf5; }
-.row-best td:first-child { border-radius: 6px 0 0 6px; }
-.row-best td:last-child  { border-radius: 0 6px 6px 0; }
+.row-best {
+  background: #ecfeff;
+}
 
 .best-badge {
-  display: block;
   font-size: 10px;
-  background: #d1fae5;
-  color: #065f46;
-  border-radius: 3px;
-  padding: 1px 5px;
-  margin-bottom: 3px;
-  font-weight: 500;
-  width: fit-content;
+  background: #06b6d4;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-right: 5px;
 }
 
-.price-cell {
-  font-weight: 600;
-  color: #1a6b4a;
-}
-
-.no-generics {
-  padding: 1rem 0;
+/* ── Savings Banner ─────────────────────────────── */
+.savings-banner {
+  margin-top: 12px;
+  background: #dcfce7;
+  color: #166534;
+  padding: 10px;
+  border-radius: 10px;
   font-size: 14px;
-  color: #6b7280;
-  text-align: center;
 }
 
-/* ── Footer ───────────────────────────────────────────────────────────────── */
+/* ── Footer ─────────────────────────────────────── */
 .footer {
   text-align: center;
-  padding: 1.5rem 1rem;
   font-size: 12px;
-  color: #9ca3af;
-  border-top: 0.5px solid #e0e4ea;
-  background: #fff;
+  padding: 14px;
+  color: #6b7280;
+}
+.generics-section {
+  animation: fadeSlide 0.3s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
