@@ -1,4 +1,4 @@
-# GenericRx — Generic Medicine Finder
+# Medsaver
 
 > Scan a branded prescription → get affordable generic alternatives from Jan Aushadhi DB instantly.
 
